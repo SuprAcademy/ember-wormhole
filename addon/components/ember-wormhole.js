@@ -23,7 +23,7 @@ export default Ember.Component.extend({
     this._super(...arguments);
     var firstNode = this._firstNode;
     var lastNode = this._lastNode;
-    run.schedule('render', () => {
+    run.schedule('render', this, function() {
       this.removeRange(firstNode, lastNode);
     });
   },
